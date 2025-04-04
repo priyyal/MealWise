@@ -1,0 +1,91 @@
+.root{
+    -fx-font-family: Arial, Helvetica, "Sans Serif Collection";
+    -fx-background-image: url("../../../../images/bg_image.jpg");
+}
+
+
+.title-Text{
+    -fx-font-size: 30;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.side-bar{
+    -fx-background-color: black;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+}
+
+.side-button{
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-font-size: 14;
+    -fx-text-fill: black;
+    -fx-translate-y: -4;
+}
+
+.side-button:hover {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-border-color: white;
+}
+
+.shopping-ui-card {
+    -fx-background-color: black;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-padding: 20 10 10 10;
+    -fx-alignment: top-center;
+}
+
+.shopping-ui-card-title{
+    -fx-text-fill: white;
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+}
+
+.shopping-label-container * {
+    -fx-font-size: 14;
+    -fx-text-fill: white;
+}
+
+.welcome-text {
+    -fx-font-family: Arial, Helvetica, "Sans Serif Collection";
+    -fx-font-size: 30;
+}
+
+.subtitle-text{
+    -fx-font-size: 13;
+}
+
+.ui-card {
+    -fx-background-color: white;
+    -fx-border-color: transparent;
+    -fx-background-radius: 20px;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0.1, 0, 4);
+    -fx-alignment: top-center;
+
+}
+
+.label-container{
+    -fx-font-size: 14;
+}
+
+.ui-card-title{
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+
+.list-button {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-background-radius: 10;
+}
+
+.list-button:hover {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-border-color: white;
+}

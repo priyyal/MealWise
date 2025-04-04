@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox alignment="TOP_LEFT" prefHeight="600" prefWidth="1280" spacing="10.0" styleClass="root" stylesheets="@../css/Dashboard.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.mealwise.controllers.DashboardController">
+    <!-- Sidebar -->
+    <VBox fx:id="sideBar" alignment="TOP_CENTER" prefHeight="600.0" prefWidth="263.0" spacing="40.0" styleClass="side-bar">
+        <padding><Insets top="45.0" /></padding>
+        <Label styleClass="title-Text" text="MealWise" />
+        <VBox alignment="CENTER" prefHeight="252.0" prefWidth="226.0" spacing="10.0">
+            <Button fx:id="dashboardButton" onAction="#switchToDashboard" prefHeight="42.0" prefWidth="135.0" styleClass="side-button" text="Dashboard" />
+            <Button fx:id="inventoryButton" onAction="#openInventory"  prefHeight="42.0" prefWidth="135.0" styleClass="side-button" text="Inventory" />
+            <Button onAction="#openRecipe" prefHeight="42.0" prefWidth="135.0" styleClass="side-button" text="Recipes" />
+            <Button onAction="#openShoppingList" prefHeight="42.0" prefWidth="135.0" styleClass="side-button" text="Shopping-list" />
+        </VBox>
+        <Button onAction="#switchToLogin" prefHeight="42.0" prefWidth="135.0" styleClass="side-button" text="Log Out" textFill="WHITE" underline="true" />
+    </VBox>
+
+    <!-- Main Section -->
+    <VBox fx:id="mainSection" alignment="TOP_CENTER" spacing="5.0" HBox.hgrow="ALWAYS">
+        <!-- Welcome Message -->
+        <VBox fx:id="topSection" prefHeight="78.0" prefWidth="1054.0" spacing="5" translateY="10.0">
+            <Label fx:id="welcomeText" styleClass="welcome-text" text="Welcome Back!" />
+            <Label fx:id="subtitleText" styleClass="subtitle-text" text="Here's a breakdown of what's happening in your account today :)" />
+         <padding>
+            <Insets left="25.0" />
+         </padding>
+        </VBox>
+
+        <!-- Grid of Cards -->
+        <GridPane fx:id="bottomSection" alignment="CENTER" hgap="40" prefHeight="558.0" prefWidth="1054.0" vgap="40">
+            <!-- Row 0 -->
+            <VBox prefHeight="221.0" prefWidth="280" spacing="15.0" styleClass="ui-card" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                <Label styleClass="ui-card-title" text="INVENTORY SUMMARY" />
+                <VBox spacing="7.0" styleClass="label-container">
+                    <Label text="📦 Total Items: N/A" />
+                    <Label text="📉 Low Stock: 0" />
+                    <Label text="⏲ Expiring Soon: 0" />
+                    <Label text="🔃 Last Updated: Today" />
+                    <padding>
+                        <Insets left="20.0" />
+                    </padding>
+                </VBox>
+            </VBox>
+
+            <VBox prefHeight="234.0" prefWidth="372.0" spacing="15.0" styleClass="shopping-ui-card" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                <Label styleClass="shopping-ui-card-title" text="SHOPPING LIST PREVIEW" />
+                <VBox spacing="5.0" styleClass="shopping-label-container">
+                    <Label text="🛒 Buy: Fish" />
+                    <Label text="🛒 Buy: Bread" />
+                    <Label text="🛒 Buy: Milk" />
+                    <Label text="🛒 Buy: Milk" />
+                    <Button prefHeight="42.0" prefWidth="130.0" styleClass="list-button" text="View Full List..." translateY="5.0" />
+               <padding>
+                  <Insets bottom="10.0" left="30.0" />
+               </padding>
+                </VBox>
+            <padding>
+               <Insets left="15.0" />
+            </padding>
+            </VBox>
+
+            <VBox prefWidth="280" spacing="15.0" styleClass="ui-card" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                <Label styleClass="ui-card-title" text="NOTIFICATIONS" />
+                <VBox styleClass="label-container">
+                    <Label text="⚠ Milk is expiring soon!" />
+                    <Label text="🍳 New recipe available: Egg Fried Rice!" />
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+                </VBox>
+            </VBox>
+
+            <!-- Row 1 -->
+            <VBox prefWidth="400" spacing="15.0" styleClass="ui-card" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                <Label styleClass="ui-card-title" text="INVENTORY CATEGORY VISUALIZATION" />
+                <BarChart fx:id="inventoryChart" prefHeight="200" prefWidth="350">
+                    <xAxis><CategoryAxis side="BOTTOM" /></xAxis>
+                    <yAxis><NumberAxis side="LEFT" /></yAxis>
+                </BarChart>
+            </VBox>
+
+            <VBox prefWidth="400" spacing="15.0" styleClass="ui-card" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                <Label styleClass="ui-card-title" text="TOP RECIPES" />
+                <VBox styleClass="label-container">
+                    <Label text="⚠ Milk is expiring soon!" />
+                    <Label text="🍳 New recipe available: Egg Fried Rice!" />
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+                </VBox>
+            </VBox>
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints maxWidth="371.20001220703125" minWidth="285.5999755859375" prefWidth="371.20001220703125" />
+                <ColumnConstraints maxWidth="394.4000244140625" minWidth="308.79998779296875" prefWidth="308.79998779296875" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="208.8" minHeight="169.6000183105469" prefHeight="207.2000244140625" />
+                <RowConstraints maxHeight="244.79998168945315" minHeight="205.60000000000002" prefHeight="207.19997558593752" />
+            </rowConstraints>
+        </GridPane>
+        <padding>
+            <Insets top="20.0" />
+        </padding>
+    </VBox>
+   <padding>
+      <Insets bottom="20.0" left="10.0" top="10.0" />
+   </padding>
+</HBox>

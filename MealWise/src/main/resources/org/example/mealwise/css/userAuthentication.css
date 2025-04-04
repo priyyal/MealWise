@@ -1,0 +1,121 @@
+.root{
+    -fx-padding: 10 10 10 10;
+    -fx-font-family: "Segoe UI", "SF Pro", "Arial", sans-serif;
+    -fx-background-color: white;
+}
+
+.title-Text {
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 40;
+}
+
+.input-text{
+    -fx-font-weight: bold;
+    -fx-font-size: 14;
+}
+
+.input-field{
+    -fx-background-radius: 7;
+    -fx-border-radius: 7;
+    -fx-background-color: transparent;
+    -fx-border-color: #afafaf;
+    -fx-border-width: 1;
+    -fx-prompt-text-fill: #bdbdbd;
+    -fx-font-family: "Consolas", "Menlo", "Lucida Console", "Courier New", monospace;
+    -fx-font-size: 15;
+}
+
+.input-field .prompt-text {
+    -fx-alignment: center;
+    -fx-translate-x: 20;
+    -fx-translate-y: 5;
+}
+
+.input-field:focused{
+    -fx-border-color: #000000;
+}
+
+.error {
+    -fx-border-color: red;
+}
+
+.instruction-text{
+    -fx-text-fill: #737373;
+}
+
+
+.check-box .box{
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-radius: 4px;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: black;
+}
+
+.terms-condition{
+    -fx-font-size: 12;
+}
+
+.signup-subtitle-text{
+    -fx-font-size: 15;
+}
+
+.signup-button{
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-cursor: hand;
+}
+
+.signup-button:hover {
+    -fx-background-color: #61e46f;
+    -fx-text-fill: black;
+    -fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-translate-x: -4px;
+    -fx-translate-y: -4px;
+    -fx-effect: dropshadow(gaussian, black, 0, 0.3, 5, 5);
+}
+
+.imageView{
+  -fx-border-color: red;
+    -fx-border-width: 5px;
+}
+
+.login-subtitle{
+    -fx-font-size: 15;
+}
+
+.login-link-group > *{
+    -fx-text-fill: #bdbdbd;
+}
+
+.login-link{
+    -fx-text-fill: black;
+}
+
+.login-button{
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-cursor: hand;
+}
+
+.login-button:hover{
+    -fx-background-color: #FFA726;
+    -fx-text-fill: black;
+    -fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-translate-x: -4px;
+    -fx-translate-y: -4px;
+    -fx-effect: dropshadow(gaussian, black, 0, 0.3, 5, 5);
+}

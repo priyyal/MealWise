@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/17.0.2-ea"
+            fx:controller="org.example.mealwise.controllers.ShoppingListController"
+            prefWidth="480" prefHeight="440"
+            stylesheets="@../css/ShoppingListPage.css"
+            styleClass="root"> <!-- this is important -->
+
+    <VBox spacing="18" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
+        
+        <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-background-color: rgba(0,0,0,0.3); -fx-background-radius: 12; -fx-padding: 8 16;">
+    <Label text="🛒" styleClass="icon-label"/>
+    <Label fx:id="titleLabel" text="🛒 Shopping List 🛒" styleClass="title-label"/>
+</HBox>
+
+
+       <HBox spacing="10">
+    <TextField fx:id="itemTextField" promptText="Add an item..." HBox.hgrow="ALWAYS"/>
+    
+    <Spinner fx:id="quantitySpinner" prefWidth="70" />
+    
+    <Button text="➕ Add Item" onAction="#handleAddItem" styleClass="add-btn"/>
+    <Button text="🗑️ Remove Selected" onAction="#handleRemoveItem" styleClass="remove-btn"/>
+    <Button text="↩️ Undo" onAction="#handleUndoRemove" styleClass="undo-btn"/>
+
+</HBox>
+
+
+        <VBox styleClass="list-card">
+        <CheckBox fx:id="checkAllBox" text="Select All" onAction="#handleCheckAll"/>
+
+            <ListView fx:id="shoppingListView" prefHeight="290"/>
+        </VBox>
+
+        <VBox spacing="6" styleClass="recommend-card">
+    <Label text="🔮 Recommended for you" styleClass="recommend-title"/>
+    <HBox fx:id="recommendedItemsBox" spacing="10">
+        <Hyperlink onAction="#handleAddRecommendedItem" text="🧀 Cheese" styleClass="recommend-pill"/>
+        <Hyperlink onAction="#handleAddRecommendedItem" text="🍞 Bread" styleClass="recommend-pill"/>
+        <Hyperlink onAction="#handleAddRecommendedItem" text="🍎 Apple" styleClass="recommend-pill"/>
+        <Hyperlink onAction="#handleAddRecommendedItem" text="🥚 Eggs" styleClass="recommend-pill"/>
+        <Hyperlink onAction="#handleAddRecommendedItem" text="🥦 Broccoli" styleClass="recommend-pill"/>
+        <Hyperlink onAction="#handleAddRecommendedItem" text="🍝 Pasta" styleClass="recommend-pill"/>
+        <!-- You can add more hyperlinks here in future -->
+    </HBox>
+</VBox>
+
+
+<HBox alignment="CENTER">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+  
+</HBox>
+
+<HBox alignment="CENTER">
+    <ImageView fx:id="groceryImage" />
+</HBox>
+
+<Label fx:id="toastLabel" text="" styleClass="toast-label" visible="false"/>
+<ToggleButton fx:id="darkModeToggle" text="🌙 Dark Mode" onAction="#toggleDarkMode" />
+
+    </VBox>
+</AnchorPane>
+
+

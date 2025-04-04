@@ -1,0 +1,160 @@
+.root {
+    -fx-background-image: url("../../../../images/bg_image.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}
+
+#addItemButton {
+    -fx-background-color: #3c7de3;   /* Red */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-radius: 8;
+}
+
+#removeItemButton {
+    -fx-background-color: #3c7de3;   /* Red */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-radius: 8;
+}
+
+#saveButton {
+    -fx-background-color: #3c7de3;   /* Red */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-radius: 8;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: rgb(255, 255, 255);
+}
+
+.table-view {   /* For the whole table but it doesnt set the background for each row and column cell in the table*/
+    -fx-background-color: rgb(255, 255, 255); /* Soft white with slight transparency */
+    -fx-border-color: transparent;
+}
+
+.table-row-cell {
+    -fx-background-color: rgb(255, 255, 255); /* your light salmon-like color */
+    -fx-border-color: black;
+    -fx-border-width: 0 0 1 0;
+}
+
+.table-cell {
+    -fx-background-color: transparent; /* keeps row color */
+    -fx-border-color: black;
+    -fx-border-width: 0 1 0 0;
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+}
+
+.suggestion-list {
+    -fx-background-color: transparent;
+    -fx-border-color: lightgray;
+}
+
+.search-bar {
+    -fx-background-color: white;
+    -fx-border-color: #00aaff;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-padding: 10;
+    -fx-font-size: 14px;
+    -fx-prompt-text-fill: #999999;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0.2, 0, 2);
+}
+
+.tab-pane {
+    -fx-background-color: transparent;
+    -fx-tab-min-width: 100px;
+    -fx-tab-max-width: 150px;
+    -fx-tab-min-height: 5px;
+    -fx-tab-background-color: #f0f0f0;
+}
+
+.tab:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-background-insets: 0;
+    -fx-border-color: transparent;
+    -fx-border-radius: 0;
+    -fx-border-width: 0;
+    -fx-padding: 0;
+    -fx-effect: none;
+}
+
+.tab:selected {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #000000;
+    -fx-border-color: #0096c9 #0096c9 transparent #0096c9;
+    -fx-border-width: 2;
+    -fx-border-radius: 10 10 0 0;
+}
+
+/* Make buttons consistent */
+#addItemButton, #removeItemButton, #saveButton {
+    -fx-background-color: #3c7de3;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 6 14;
+    -fx-background-radius: 8;
+}
+
+#addItemButton:hover, #removeItemButton:hover, #saveButton:hover {
+    -fx-background-color: #5a91e5;
+}
+
+/* Table styling for better visibility */
+.table-view {
+    -fx-background-color: rgba(255,255,255,0.95);
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 10;
+}
+
+/* Search bar */
+.search-bar {
+    -fx-background-color: white;
+    -fx-border-color: #3c7de3;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 8;
+    -fx-font-size: 14px;
+}
+
+/* Tabs cleanup */
+.tab-pane {
+    -fx-background-color: transparent;
+}
+
+.table-view {
+    -fx-background-color: white;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-column {
+    -fx-alignment: CENTER;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #f4f4f4;
+}
+
+.table-cell {
+    -fx-font-size: 14px;
+    -fx-padding: 8;
+    -fx-border-color: #ddd;
+    -fx-border-width: 0 0 1 0;
+}
+
+.table-row-cell {
+    -fx-background-color: transparent;
+}
+
+.error {
+    -fx-border-color: red;
+    -fx-border-width: 4px;
+}

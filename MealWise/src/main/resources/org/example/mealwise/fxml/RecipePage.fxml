@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane prefHeight="832.0" prefWidth="1000.0" stylesheets="@../css/RecipePage.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.mealwise.controllers.RecipePageController">
+    <VBox prefHeight="547.0" prefWidth="1000.0">
+        <HBox alignment="CENTER_LEFT" spacing="450.0">
+         <VBox prefHeight="63.0" prefWidth="285.0">
+            <children>
+                  <Label prefHeight="35.0" prefWidth="170.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Recipes" />
+               <Label text="What would you like to eat today?" />
+            </children>
+         </VBox>
+            <TextField styleClass="search-Field" fx:id="searchField" prefHeight="34.0" prefWidth="204.0" promptText="Search recipes..." />
+        </HBox>
+
+        <ScrollPane fitToHeight="true" fitToWidth="true" pannable="true" styleClass="scroll-area">
+            <FlowPane fx:id="recipeContainer" columnHalignment="CENTER" hgap="20.0" prefHeight="1783.0" prefWidth="1022.0" vgap="15.0">
+                <padding>
+                    <Insets left="15.0" />
+                </padding></FlowPane>
+            <padding>
+                <Insets bottom="10.0" left="30.0" right="10.0" top="10.0" />
+            </padding>
+        </ScrollPane>
+        <padding>
+            <Insets bottom="5.0" left="20.0" right="5.0" top="20.0" />
+        </padding>
+    </VBox>
+    <Pane fx:id="darkOverlay" styleClass="dark-overlay" />
+</StackPane>

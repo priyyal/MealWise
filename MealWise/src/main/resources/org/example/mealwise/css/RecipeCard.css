@@ -1,0 +1,37 @@
+.info-container{
+    -fx-background-color: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    -fx-background-radius: 0 0 20 20;
+    -fx-border-radius: 0 0 20 20;
+}
+
+.info-container  *{
+    -fx-text-fill: white;
+}
+
+.info-text *{
+    -fx-font-family: Poppins;
+    -fx-font-size: 13;
+    -fx-background-color: rgba(255, 255, 255, 0.3);
+    -fx-padding: 5 7 5 7;
+    -fx-background-radius: 15;
+}
+.name-label{
+    -fx-text-fill: white;
+    -fx-font-family: Arial;
+    -fx-font-size: 24;
+}
+
+.recipe-button {
+    -fx-background-color: white;
+    -fx-text-fill: #002f00;
+    -fx-font-size: 15;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-padding: 0;
+    -fx-cursor: pointer;
+}
+
+.recipe-button:hover {
+    -fx-background-color: #3ebd6e;
+    -fx-text-fill: white;
+}

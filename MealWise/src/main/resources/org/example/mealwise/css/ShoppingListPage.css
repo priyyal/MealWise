@@ -1,0 +1,237 @@
+.root {
+    -fx-background-image: url("../../../../images/bg_image.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+/* Title */
+.title-label {
+    -fx-font-family: "Times New Roman"; /* or "Segoe UI", "Helvetica", etc */
+    -fx-font-size: 34px;
+    -fx-font-weight: 900;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 6, 0.6, 1, 2);
+    -fx-padding: 10 20;
+   /* -fx-background-color: rgba(246, 255, 81, 0.716); */
+    -fx-background-radius: 12;
+}
+
+
+
+.icon-label {
+    -fx-font-size: 28px;
+}
+
+/* Input Field */
+.text-field {
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-color: #d0d0d0;
+    -fx-padding: 10px;
+    -fx-font-size: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 3, 0.3, 0, 2);
+}
+
+/* Buttons */
+.button {
+    -fx-background-radius: 10px;
+    -fx-padding: 10px 16px;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 3, 0.3, 0, 2);
+}
+
+.add-btn {
+    -fx-background-color: #2ecc71;
+}
+
+.add-btn:hover {
+    -fx-background-color: #27ae60;
+}
+
+.remove-btn {
+    -fx-background-color: #e74c3c;
+}
+
+.remove-btn:hover {
+    -fx-background-color: #c0392b;
+}
+
+/* List container card */
+.list-card {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 14px;
+    -fx-background-radius: 14px;
+    -fx-padding: 14;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.04), 6, 0.3, 0, 1);
+}
+
+
+/* ListView */
+.list-view {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+/* Recommendation */
+.recommend-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #8e44ad;
+    -fx-font-style: italic;
+    -fx-padding: 12 0
+}
+
+.toast-label {
+    -fx-text-fill: white;
+    -fx-background-color: rgba(0, 0, 0, 0.7);
+    -fx-padding: 8 15;
+    -fx-background-radius: 20px;
+    -fx-font-size: 13px;
+    -fx-alignment: center;
+    -fx-opacity: 0;
+    -fx-translate-y: -20;
+}
+
+.recommend-card {
+    -fx-background-color: #fdf4ff;
+    -fx-border-color: #e0c3fc;
+    -fx-border-radius: 12px;
+    -fx-background-radius: 12px;
+    -fx-padding: 16px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 6, 0.3, 0, 2);
+}
+
+.recommend-title {
+    -fx-font-size: 16px;
+    -fx-text-fill: #8e44ad;
+    -fx-font-weight: bold;
+}
+
+.recommend-pill {
+    -fx-background-color: #f3e5f5;
+    -fx-text-fill: #6c3483;
+    -fx-font-size: 14px;
+    -fx-padding: 6 12;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+    -fx-border-color: transparent;
+}
+
+.recommend-pill:hover {
+    -fx-underline: false;
+    -fx-background-color: #e1bee7;
+}
+
+/* Custom list card wrapper (already applied) */
+.list-card {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 12px;
+    -fx-background-radius: 12px;
+    -fx-padding: 12;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 6, 0.3, 0, 2);
+}
+
+/* Custom ListCell style */
+.custom-cell {
+    -fx-background-color: transparent;
+    -fx-font-size: 15px;
+    -fx-padding: 6 12;
+}
+
+.custom-cell:hover {
+    -fx-background-color: #f9f9f9;
+    -fx-cursor: hand;
+}
+
+/* Optional: Checkbox styling */
+.check-box {
+    -fx-font-size: 14px;
+}
+
+/* Optional: Add fade effect to list cells */
+.list-view .list-cell {
+    -fx-transition: all 0.2s ease-in-out;
+}
+
+.item-name {
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-text-fill: #2c3e50;
+}
+
+.item-quantity {
+    -fx-font-size: 13px;
+    -fx-text-fill: #888888;
+}
+
+/* Improve cell base */
+.custom-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 10 14;
+    -fx-font-size: 15px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-transition: all 0.2s ease-in-out;
+}
+
+.custom-cell:hover {
+    -fx-background-color: #f2f2f2;
+}
+
+/* Label inside list cell */
+.item-name {
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-text-fill: #2c3e50;
+}
+
+.item-quantity {
+    -fx-font-size: 13px;
+    -fx-text-fill: #7f8c8d;
+}
+
+.scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #dcdcdc;
+    -fx-background-radius: 8px;
+}
+
+.strikethrough {
+    -fx-strikethrough: true;
+    -fx-opacity: 0.65;
+    -fx-text-fill: #7f8c8d;
+    -fx-font-style: italic;
+}
+
+
+.undo-btn {
+    -fx-background-color: #3498db;
+}
+
+.undo-btn:hover {
+    -fx-background-color: #2980b9;
+}
+
+@keyframes slideIn {
+    0% {
+        -fx-translate-x: -40;
+        -fx-opacity: 0;
+    }
+    100% {
+        -fx-translate-x: 0;
+        -fx-opacity: 1;
+    }
+}
+
+.title-label.animated {
+    -fx-animation-name: slideIn;
+    -fx-animation-duration: 0.6s;
+    -fx-animation-fill-mode: forwards;
+}

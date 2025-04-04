@@ -1,0 +1,34 @@
+.root{
+    -fx-background-image: url("../../../../images/bg_image.jpg");
+}
+
+.recipe-header {
+    -fx-font-size: 30;
+}
+
+.scroll-area{
+    -fx-border: none;
+
+}
+
+.scroll-area .viewport{
+    -fx-padding: 0 0 0 30;
+    -fx-background-color: transparent;
+    -fx-border: none;
+}
+
+.scroll-bar {
+    -fx-opacity: 0;
+    -fx-padding: 0;
+
+}
+
+.search-Field{
+    -fx-border-color: transparent transparent black transparent;
+    -fx-background-color: transparent;
+
+}
+
+.dark-overlay{
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+}

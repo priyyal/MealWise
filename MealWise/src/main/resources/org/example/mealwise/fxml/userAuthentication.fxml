@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<StackPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.mealwise.controllers.UserAuthenticationController">
+   <children>
+      <HBox fx:id="root" alignment="CENTER" prefHeight="547.0" prefWidth="1000.0" spacing="0" styleClass="root" stylesheets="@../css/userAuthentication.css">
+          <StackPane fx:id="container" maxWidth="700" minWidth="500" prefWidth="700" styleClass="container" HBox.hgrow="ALWAYS">
+      <!--        SignupSection-->
+              <VBox fx:id="signupSection" alignment="CENTER" prefHeight="539.0" prefWidth="498.0" spacing="40.0" HBox.hgrow="ALWAYS">
+                  <VBox alignment="CENTER" spacing="10.0">
+                      <Label styleClass="title-Text" text="Join Now for Success" textAlignment="CENTER" />
+                      <Label alignment="CENTER" styleClass="signup-subtitle-text " text="Welcome to MealWise - Let's create an account!" textAlignment="CENTER" />
+                  </VBox>
+                  <VBox prefHeight="224.0" prefWidth="239.0" spacing="8.0">
+                      <VBox spacing="5.0">
+                          <Label styleClass="input-text" text="Name*" />
+                          <TextField fx:id="nameField" prefHeight="75.0" prefWidth="598.0" promptText="Ken498" styleClass="input-field" />
+                      </VBox>
+                      <VBox spacing="5.0">
+                          <Label styleClass="input-text" text="Email*" />
+                          <TextField fx:id="emailField" prefHeight="75.0" promptText="Ken498@gmail.com" styleClass="input-field" />
+                      </VBox>
+                      <VBox spacing="5.0">
+                          <Label styleClass="input-text" text="Password*" />
+                          <PasswordField fx:id="signupPasswordField" prefHeight="75.0" promptText="Kene25sz" styleClass="input-field" />
+                      </VBox>
+                  </VBox>
+                  <VBox spacing="35.0" translateY="-20.0">
+                      <VBox spacing="10.0">
+                          <Label styleClass="instruction-text" text="Your password needs to include" />
+                          <Label contentDisplay="LEFT" graphicTextGap="3" text="Must contain one number">
+                              <graphic>
+                                  <ImageView fitHeight="20" fitWidth="20">
+                                      <Image url="@../../../../images/checked.png" />
+                                  </ImageView>
+                              </graphic>
+                          </Label>
+                          <Label contentDisplay="LEFT" graphicTextGap="3" text="Min 8 characters">
+                              <graphic>
+                                  <ImageView fitHeight="20" fitWidth="20">
+                                      <Image url="@../../../../images/checked.png" />
+                                  </ImageView>
+                              </graphic>
+                          </Label>
+                      </VBox>
+                      <VBox spacing="25.0">
+                          <HBox spacing="5.0">
+                              <CheckBox styleClass="checkbox" />
+                              <Label styleClass="terms-condition" text="I agree to the Term&amp;Privacy" />
+                          </HBox>
+                          <Button fx:id="signupButton" onAction="#createAccount" prefHeight="70.0" prefWidth="600.0" styleClass="signup-button" text="SIGN ME UP!" />
+                          <HBox alignment="CENTER" styleClass="login-link-group">
+                              <Label text="Already have an account?" />
+                              <Hyperlink onAction="#switchToLogin" styleClass="login-link" text="Log in" />
+                          </HBox>
+                      </VBox>
+                  </VBox>
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+               <padding>
+                  <Insets left="130.0" right="130.0" />
+               </padding>
+              </VBox>
+      
+      <!--        LoginSection-->
+              <VBox fx:id="loginSection" alignment="CENTER" opacity="0.0" prefHeight="539.0" prefWidth="498.0" spacing="40.0" HBox.hgrow="ALWAYS">
+                  <VBox alignment="CENTER" spacing="5.0">
+                      <Label styleClass="title-Text" text="WELCOME BACK!" />
+                      <Label styleClass="login-subtitle" text="Please enter your details" />
+                  </VBox>
+                  <VBox prefHeight="186.0" prefWidth="578.0" spacing="8.0">
+                      <VBox spacing="5.0">
+                          <Label styleClass="input-text" text="Email or Username*" />
+                          <TextField fx:id="usernameField" prefHeight="50.0" prefWidth="598.0" promptText="Ken498" styleClass="input-field" />
+                      </VBox>
+                      <VBox spacing="5.0">
+                          <Label styleClass="input-text" text="Password*" />
+                          <PasswordField fx:id="loginPasswordField" prefHeight="50.0" promptText="Kene25sz" styleClass="input-field" />
+                      </VBox>
+                  </VBox>
+                  <VBox spacing="35.0" translateY="-60.0">
+                      <VBox spacing="25.0">
+                          <HBox alignment="CENTER_LEFT" spacing="220.0">
+                              <HBox alignment="CENTER" spacing="5.0">
+                                  <CheckBox styleClass="checkbox" />
+                                  <Label alignment="CENTER" prefHeight="15.0" prefWidth="87.0" styleClass="terms-condition" text="Remember me" />
+                              </HBox>
+                              <Hyperlink alignment="CENTER" onAction="#forgotPasswordWindow" styleClass="login-link" text="Forgot Password?" />
+                          </HBox>
+                          <Button onAction="#loginUser" prefHeight="70.0" prefWidth="600.0" styleClass="login-button" text="SIGN IN!" />
+                          <HBox alignment="CENTER" styleClass="login-link-group">
+                              <Label text="Don't have an account yet?" />
+                              <Hyperlink onAction="#switchToSignUp" styleClass="login-link" text="Sign up" />
+                          </HBox>
+                      </VBox>
+                  </VBox>
+                  <StackPane.margin>
+                      <Insets />
+                  </StackPane.margin>
+                  <padding>
+                      <Insets left="130.0" right="130.0" />
+                  </padding>
+              </VBox>
+          </StackPane>
+      <!--    Image View-->
+          <Pane fx:id="imagePane" minWidth="500" prefHeight="547.0" prefWidth="300" styleClass="imageView" HBox.hgrow="ALWAYS" />
+      </HBox>
+   </children>
+</StackPane>
