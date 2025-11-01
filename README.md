@@ -1,6 +1,6 @@
 # 🥗 MealWise
 
-**MealWise** is a modern JavaFX desktop application designed to help users manage their pantry, generate smart shopping lists, and discover recipes—all in one place. Built with love, logic, and a lot of good UI. 💻🛒
+**MealWise** is a modern JavaFX desktop application designed to help users manage their pantry, generate smart shoppiing lists, and discover recipes—all in one place. Built with love, logic, and a lot of good UI. 💻🛒
 
 ---
 
